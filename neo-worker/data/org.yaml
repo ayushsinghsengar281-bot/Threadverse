@@ -1,0 +1,183 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# org.yaml — Cogneoverse Canonical Truth
+# Priority: ABSOLUTE — overrides everything else Neo knows
+# Update this file whenever roles, ownership, or project status changes.
+# ─────────────────────────────────────────────────────────────────────────────
+
+org:
+  name: Cogneoverse
+  founded: 2026
+
+team:
+  - id: shreyash-dange
+    name: Shreyash Dange
+    role: CTO
+    title: Co-founder & CTO
+    email: shreyash@cogneoverse.com
+    owns:
+      - orion-cli
+      - orion-ide
+      - threadverse
+      - neo
+    responsibilities:
+      - All technical architecture decisions
+      - System design and infrastructure
+      - AI/ML systems
+      - Neo Worker development
+      - ThreadVerse backend
+
+  - id: jay-suryawanshi
+    name: Jay Suryawanshi
+    role: CEO
+    title: Co-founder & CEO
+    email: jay@cogneoverse.com
+    owns:
+      - agastya-gtm
+      - company-strategy
+    responsibilities:
+      - Strategic decisions
+      - Partnerships and revenue
+      - Agastya product direction
+      - Go-to-market execution
+
+  - id: moksh-bhayre
+    name: Moksh Bhayre
+    role: COO
+    title: Co-founder & COO
+    email: moksh@cogneoverse.com
+    owns:
+      - agastya-execution
+      - operations
+    responsibilities:
+      - Operational efficiency
+      - Agastya delivery pipeline
+      - Cross-team coordination
+      - Day-to-day execution
+
+projects:
+  - id: orion-cli
+    name: Orion CLI
+    status: active
+    owner: shreyash-dange
+    description: >
+      AI-powered command-line interface with a 15-stage processing pipeline
+      (C01 through C15), a LinUCB reinforcement learning reward signal layer,
+      and the IISG Contract System.
+    components:
+      - id: pipeline
+        name: Pipeline C01–C15
+        description: 15-stage processing pipeline from raw command parsing to final output synthesis
+      - id: linucb-rl
+        name: LinUCB RL Layer
+        description: >
+          Contextual bandit algorithm (Linear Upper Confidence Bound) used as
+          the reward signal design. Scores outputs at each pipeline stage and
+          feeds back to improve future runs.
+      - id: iisg-contract
+        name: IISG Contract System
+        description: Contract-based output validation system at key pipeline stages
+
+  - id: agastya
+    name: Agastya
+    status: active
+    owner_strategy: jay-suryawanshi
+    owner_execution: moksh-bhayre
+    description: >
+      Cogneoverse's second product. ML-powered enterprise offering.
+      GTM owned by Jay, execution owned by Moksh.
+    targets:
+      - Scientech
+      - Nivo Controls
+    components:
+      - id: agastya-gtm
+        name: GTM Strategy
+        owner: jay-suryawanshi
+        description: Go-to-market strategy targeting Scientech and Nivo Controls
+      - id: agastya-ml
+        name: ML Roadmap
+        owner: jay-suryawanshi
+        description: Machine learning development roadmap
+
+  - id: threadverse
+    name: ThreadVerse
+    status: active
+    owner: shreyash-dange
+    description: >
+      Async-first team operating system. NOT a Slack clone.
+      Neo is its nervous system — not a sidebar bot.
+    components:
+      - id: spaces
+        name: Spaces & Threads
+        description: Spaces map to projects. Threads have lifecycle — open, in-progress, resolved, archived.
+      - id: decision-nodes
+        name: Decision Nodes
+        description: Human-marked decisions. Highest retrieval priority after org.yaml.
+      - id: updates-feed
+        name: Updates Feed
+        description: Async standup layer. Members post daily context — in progress, blocked, shipped.
+      - id: neo-worker
+        name: Neo Worker
+        description: >
+          Standalone always-on Node.js process. Never serverless.
+          Runs the full query pipeline, event consumer, and ambient loop.
+
+infrastructure:
+  hosting: Oracle Free Tier VPS
+  specs: 4 ARM cores, 24 GB RAM
+  cost: free forever
+  components:
+    - ThreadVerse API (Node.js / Express)
+    - Neo Worker (Node.js standalone process)
+    - PocketBase (SQLite → Postgres, single binary)
+    - PageIndex + ChatIndex scripts (Python, scheduled rebuild)
+  external:
+    - name: LLM API
+      provider: LiteLLM routing to Claude (Anthropic)
+      usage: called only when Neo needs to generate a response
+
+tech_stack:
+  runtime: Node.js
+  database: PocketBase (SQLite)
+  realtime: PocketBase Realtime subscriptions
+  auth: PocketBase built-in
+  llm_routing: LiteLLM
+  llm_provider: Claude (Anthropic) / NVIDIA NIM
+  static_knowledge: PageIndex (Vectify AI — vectorless, tree-based)
+  conversation_context: ChatIndex (Vectify AI)
+  live_state: Org Graph (in-memory knowledge graph)
+  frontend: React + PocketBase Realtime
+  no_vector_dbs: true
+  no_embeddings: true
+
+decisions:
+  - id: decision-2026-04-03
+    date: "2026-04-03"
+    title: Agastya targeting Scientech and Nivo Controls
+    body: >
+      Agastya will target Scientech and Nivo Controls as primary enterprise customers.
+      This governs all GTM activities and outreach prioritisation.
+    made_by: jay-suryawanshi
+    project: agastya
+    is_canonical: true
+
+  - id: decision-neo-not-chatbot
+    date: "2026-04-01"
+    title: Neo is not a chatbot
+    body: >
+      Neo is NOT a chatbot. It does not do customer support. It does not wait to be asked.
+      Neo is Cogneoverse's embedded org intelligence layer — the platform's nervous system.
+      Every message, decision, and thread is Neo's input. The UI is just the surface.
+      This decision governs all architecture choices for ThreadVerse and Neo.
+    made_by: shreyash-dange
+    project: threadverse
+    is_canonical: true
+
+  - id: decision-no-vector-dbs
+    date: "2026-04-01"
+    title: No vector DBs or embeddings in Neo
+    body: >
+      Neo uses PageIndex (tree-based, vectorless RAG) and ChatIndex instead of
+      vector databases or embedding similarity search. Structured reasoning only.
+    made_by: shreyash-dange
+    project: neo
+    is_canonical: true
