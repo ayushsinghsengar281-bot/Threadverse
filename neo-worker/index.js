@@ -10,7 +10,8 @@
 //   4. Build initial Org Graph from org.yaml + PocketBase state
 //   5. Subscribe to PocketBase Realtime
 //   6. Start ambient monitoring loop
-
+import dotenv from "dotenv";
+dotenv.config();
 import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
@@ -136,7 +137,7 @@ async function start() {
 
   // ── Step 7: Expose HTTP endpoint for the Next.js frontend ────────────
   // The Next.js route.ts calls this endpoint instead of OpenRouter directly
-  await startHttpServer({ pageIndexTree, chatIndex, orgGraph })
+  // await startHttpServer({ pageIndexTree, chatIndex, orgGraph })
 
   // ── Step 8: Start ambient monitoring loop ─────────────────────────────
   startAmbientLoop({ orgGraph, eventConsumer, pb, pbConnected })

@@ -9,9 +9,10 @@
     "dev": "node --watch index.js"
   },
   "dependencies": {
+    "dotenv": "^17.4.2",
     "js-yaml": "^4.1.0",
-    "node-fetch": "^3.3.2",
     "node-cron": "^3.0.3",
+    "node-fetch": "^3.3.2",
     "pocketbase": "^0.21.0"
   }
 }

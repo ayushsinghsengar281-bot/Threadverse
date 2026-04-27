@@ -1,0 +1,244 @@
+{
+  "id": "root",
+  "title": "Cogneoverse Org",
+  "summary": "Root of all org knowledge. Contains team, projects, and decisions.",
+  "priority": "absolute",
+  "tags": [
+    "org",
+    "cogneoverse",
+    "root"
+  ],
+  "content": "This is the root of the Cogneoverse knowledge tree.",
+  "children": [
+    {
+      "id": "team",
+      "title": "Team",
+      "summary": "All 3 Cogneoverse team members, their roles and ownership.",
+      "priority": "high",
+      "tags": [
+        "team",
+        "members",
+        "people",
+        "roles",
+        "founders"
+      ],
+      "content": "Cogneoverse has 3 team members.",
+      "children": [
+        {
+          "id": "team-shreyash-dange",
+          "title": "Shreyash Dange",
+          "summary": "CTO at Cogneoverse. Owns: orion-cli, orion-ide, threadverse, neo",
+          "priority": "high",
+          "tags": [
+            "shreyash-dange",
+            "shreyash-dange",
+            "cto",
+            "team",
+            "member"
+          ],
+          "content": "Name: Shreyash Dange\nRole: CTO\nID: shreyash-dange\nOwns: orion-cli, orion-ide, threadverse, neo\n",
+          "children": []
+        },
+        {
+          "id": "team-jay-suryawanshi",
+          "title": "Jay Suryawanshi",
+          "summary": "CEO at Cogneoverse. Owns: agastya-gtm, company-strategy",
+          "priority": "high",
+          "tags": [
+            "jay-suryawanshi",
+            "jay-suryawanshi",
+            "ceo",
+            "team",
+            "member"
+          ],
+          "content": "Name: Jay Suryawanshi\nRole: CEO\nID: jay-suryawanshi\nOwns: agastya-gtm, company-strategy\n",
+          "children": []
+        },
+        {
+          "id": "team-moksh-bhayre",
+          "title": "Moksh Bhayre",
+          "summary": "COO at Cogneoverse. Owns: agastya-execution, operations",
+          "priority": "high",
+          "tags": [
+            "moksh-bhayre",
+            "moksh-bhayre",
+            "coo",
+            "team",
+            "member"
+          ],
+          "content": "Name: Moksh Bhayre\nRole: COO\nID: moksh-bhayre\nOwns: agastya-execution, operations\n",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "projects",
+      "title": "Projects",
+      "summary": "All 3 active Cogneoverse projects.",
+      "priority": "high",
+      "tags": [
+        "projects",
+        "orion",
+        "agastya",
+        "threadverse"
+      ],
+      "content": "Cogneoverse has 3 projects.",
+      "children": [
+        {
+          "id": "project-orion-cli",
+          "title": "Orion CLI",
+          "summary": "Project Orion CLI. Status: active. Owner: shreyash-dange",
+          "priority": "high",
+          "tags": [
+            "orion-cli",
+            "orion-cli",
+            "project",
+            "active"
+          ],
+          "content": "Project: Orion CLI\nID: orion-cli\nStatus: active\nOwner: shreyash-dange\n",
+          "children": [
+            {
+              "id": "project-orion-cli-components",
+              "title": "Components",
+              "summary": "components for Orion CLI",
+              "priority": "medium",
+              "tags": [
+                "components",
+                "orion-cli",
+                "project"
+              ],
+              "content": "{'id': 'pipeline', 'name': 'Pipeline C01\u2013C15', 'description': '15-stage processing pipeline from raw command parsing to final output synthesis'}\n{'id': 'linucb-rl', 'name': 'LinUCB RL Layer', 'description': 'Contextual bandit algorithm (Linear Upper Confidence Bound) used as the reward signal design. Scores outputs at each pipeline stage and feeds back to improve future runs.\\n'}\n{'id': 'iisg-contract', 'name': 'IISG Contract System', 'description': 'Contract-based output validation system at key pipeline stages'}",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "project-agastya",
+          "title": "Agastya",
+          "summary": "Project Agastya. Status: active. Owner: jay-suryawanshi",
+          "priority": "high",
+          "tags": [
+            "agastya",
+            "agastya",
+            "project",
+            "active"
+          ],
+          "content": "Project: Agastya\nID: agastya\nStatus: active\nOwner: jay-suryawanshi\n",
+          "children": [
+            {
+              "id": "project-agastya-targets",
+              "title": "Targets",
+              "summary": "targets for Agastya",
+              "priority": "medium",
+              "tags": [
+                "targets",
+                "agastya",
+                "project"
+              ],
+              "content": "Scientech\nNivo Controls",
+              "children": []
+            },
+            {
+              "id": "project-agastya-components",
+              "title": "Components",
+              "summary": "components for Agastya",
+              "priority": "medium",
+              "tags": [
+                "components",
+                "agastya",
+                "project"
+              ],
+              "content": "{'id': 'agastya-gtm', 'name': 'GTM Strategy', 'owner': 'jay-suryawanshi', 'description': 'Go-to-market strategy targeting Scientech and Nivo Controls'}\n{'id': 'agastya-ml', 'name': 'ML Roadmap', 'owner': 'jay-suryawanshi', 'description': 'Machine learning development roadmap'}",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "project-threadverse",
+          "title": "ThreadVerse",
+          "summary": "Project ThreadVerse. Status: active. Owner: shreyash-dange",
+          "priority": "high",
+          "tags": [
+            "threadverse",
+            "threadverse",
+            "project",
+            "active"
+          ],
+          "content": "Project: ThreadVerse\nID: threadverse\nStatus: active\nOwner: shreyash-dange\n",
+          "children": [
+            {
+              "id": "project-threadverse-components",
+              "title": "Components",
+              "summary": "components for ThreadVerse",
+              "priority": "medium",
+              "tags": [
+                "components",
+                "threadverse",
+                "project"
+              ],
+              "content": "{'id': 'spaces', 'name': 'Spaces & Threads', 'description': 'Spaces map to projects. Threads have lifecycle \u2014 open, in-progress, resolved, archived.'}\n{'id': 'decision-nodes', 'name': 'Decision Nodes', 'description': 'Human-marked decisions. Highest retrieval priority after org.yaml.'}\n{'id': 'updates-feed', 'name': 'Updates Feed', 'description': 'Async standup layer. Members post daily context \u2014 in progress, blocked, shipped.'}\n{'id': 'neo-worker', 'name': 'Neo Worker', 'description': 'Standalone always-on Node.js process. Never serverless. Runs the full query pipeline, event consumer, and ambient loop.\\n'}",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decisions",
+      "title": "Decisions",
+      "summary": "All 3 org decisions. Highest retrieval priority after org.yaml.",
+      "priority": "absolute",
+      "tags": [
+        "decisions",
+        "resolved",
+        "concluded",
+        "agreed"
+      ],
+      "content": "3 decisions indexed.",
+      "children": [
+        {
+          "id": "decision-2026-04-03",
+          "title": "Agastya targeting Scientech and Nivo Controls",
+          "summary": "Agastya targeting Scientech and Nivo Controls",
+          "priority": "absolute",
+          "tags": [
+            "decision",
+            "agastya",
+            "jay-suryawanshi",
+            "decision-2026-04-03"
+          ],
+          "content": "Decision: Agastya targeting Scientech and Nivo Controls\nDate: 2026-04-03\nProject: agastya\nMade by: jay-suryawanshi\nCanonical: True\n\nAgastya will target Scientech and Nivo Controls as primary enterprise customers. This governs all GTM activities and outreach prioritisation.\n\n",
+          "children": []
+        },
+        {
+          "id": "decision-neo-not-chatbot",
+          "title": "Neo is not a chatbot",
+          "summary": "Neo is not a chatbot",
+          "priority": "absolute",
+          "tags": [
+            "decision",
+            "threadverse",
+            "shreyash-dange",
+            "decision-neo-not-chatbot"
+          ],
+          "content": "Decision: Neo is not a chatbot\nDate: 2026-04-01\nProject: threadverse\nMade by: shreyash-dange\nCanonical: True\n\nNeo is NOT a chatbot. It does not do customer support. It does not wait to be asked. Neo is Cogneoverse's embedded org intelligence layer \u2014 the platform's nervous system. Every message, decision, and thread is Neo's input. The UI is just the surface. This decision governs all architecture choices for ThreadVerse and Neo.\n\n",
+          "children": []
+        },
+        {
+          "id": "decision-no-vector-dbs",
+          "title": "No vector DBs or embeddings in Neo",
+          "summary": "No vector DBs or embeddings in Neo",
+          "priority": "absolute",
+          "tags": [
+            "decision",
+            "neo",
+            "shreyash-dange",
+            "decision-no-vector-dbs"
+          ],
+          "content": "Decision: No vector DBs or embeddings in Neo\nDate: 2026-04-01\nProject: neo\nMade by: shreyash-dange\nCanonical: True\n\nNeo uses PageIndex (tree-based, vectorless RAG) and ChatIndex instead of vector databases or embedding similarity search. Structured reasoning only.\n\n",
+          "children": []
+        }
+      ]
+    }
+  ]
+}
