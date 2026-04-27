@@ -59,7 +59,7 @@ export async function callLLM({ query, context, intent }) {
           }),
         },
         body: JSON.stringify({
-          model: process.env.LLM_MODEL || "claude-sonnet-4-20250514",
+          model: process.env.LLM_MODEL || "nvidia_nim/meta/llama-3.1-70b-instruct",
           messages,
           max_tokens: 1000,
           temperature: 0.3, // lower = more precise, less creative — right for org intelligence
